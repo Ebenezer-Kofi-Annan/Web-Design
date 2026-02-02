@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Ebenezer Kofi Annan | Portfolio</title>
+
+    <meta name="description"
+          content="Ebenezer Kofi Annan – Software Engineer and Frontend Developer building impactful digital solutions.">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+</head>
+<body>
+
+<!-- ================= HERO ================= -->
+<div class="hero-header" id="home">
+    <div class="wrapper">
+
+        <header>
+            <div class="logo">
+                <i class="fa-solid fa-a"></i>
+                <span class="logo-text">Ebenezer Kofi Annan</span>
+            </div>
+
+            <nav>
+                <div class="togglebtn">
+                    <span></span><span></span><span></span>
+                </div>
+                <ul class="navlinks">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#resume">Resume</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <div class="container">
+            <div class="hero-pic">
+                <img src="hero-pic.jpeg" alt="Profile photo">
+            </div>
+
+            <div class="hero-text">
+                <h5>Hi, I'm <span class="input">Software Engineer</span></h5>
+                <h1>Ebenezer Kofi Annan</h1>
+
+                <p>
+                    Software Engineer passionate about frontend development,
+                    product design, and building technology that solves
+                    real-world problems.
+                </p>
+
+                <div class="btn-group">
+                    <a href="Ebenezer_Kofi_Annan_CV.pdf" class="btn" download>Download CV</a>
+                    <a href="#contact" class="btn">Contact</a>
+                </div>
+
+                <div class="social">
+                    <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="#"><i class="fa-brands fa-github"></i></a>
+                    <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<!-- ================= PORTFOLIO ================= -->
+<section id="portfolio" class="reveal">
+    <h2>My Projects</h2>
+
+    <div class="projects-container">
+
+        <div class="project-card">
+            <img src="work-3.png" alt="Portfolio project">
+            <h3>Personal Portfolio</h3>
+            <p>
+                Responsive portfolio website built using HTML, CSS, and JavaScript.
+            </p>
+            <a href="#">GitHub</a>
+            <a href="#">Live Demo</a>
+        </div>
+
+        <!-- GOOGLE SLIDES CASE STUDY -->
+        <div class="project-card animated-bg">
+            <h3>Agro Track App – Case Study</h3>
+            <p>
+                Problem: Farmers struggle to track crops and yields.<br>
+                Solution: Designed a tracking app with dashboards and alerts.<br>
+                Tools: Product design, UX thinking.
+            </p>
+            <a href="https://docs.google.com/presentation/d/1y50G16CFzIVEnzHDeYxGdYqz9PpraLQFYpYI76gdExI/edit"
+               target="_blank">
+                View Presentation
+            </a>
+        </div>
+
+    </div>
+</section>
+
+<!-- ================= RESUME ================= -->
+<section id="resume" class="reveal">
+    <h2>Resume</h2>
+    <p>Download my CV to see my experience and skills.</p>
+    <a href="Ebenezer_Kofi_Annan_CV.pdf" class="btn" download>Download CV</a>
+</section>
+
+<!-- ================= CONTACT ================= -->
+<section id="contact" class="reveal">
+    <h2>Contact Me</h2>
+
+    <form action="mailto:ebenezerkofiannan84@gmail.com"
+          method="post"
+          enctype="text/plain">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <textarea name="message" placeholder="Your Message" required></textarea>
+        <button type="submit" class="btn">Send Message</button>
+    </form>
+</section>
+
+<!-- ================= JS ================= -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.10/typed.js"></script>
+
+<script>
+    // Navbar toggle
+    const togglebtn = document.querySelector(".togglebtn");
+    const nav = document.querySelector(".navlinks");
+
+    togglebtn.addEventListener("click", () => {
+        togglebtn.classList.toggle("click");
+        nav.classList.toggle("open");
+    });
+
+    // Typed text
+    new Typed(".input", {
+        strings: ["Software Engineer", "Frontend Developer", "Web Developer"],
+        typeSpeed: 70,
+        backSpeed: 50,
+        loop: true
+    });
+
+    // Scroll reveal
+    function revealOnScroll() {
+        document.querySelectorAll(".reveal").forEach(section => {
+            const windowHeight = window.innerHeight;
+            const top = section.getBoundingClientRect().top;
+            if (top < windowHeight - 100) {
+                section.classList.add("active");
+            }
+        });
+    }
+
+    window.addEventListener("scroll", revealOnScroll);
+</script>
+
+</body>
+</html>
